@@ -1,0 +1,61 @@
+/* JavaFX CSS - Leave this comment until you have at least create one rule which uses -fx-Property */
+/* @font-face {
+        font-family:"Microsoft YaHei";
+        src: url('lt.ttf'); 
+}
+ */   
+.root {
+	-fx-background-image:url("../img/front2.png"); 
+	-fx-background-position: 0 -38;
+}
+
+.title {
+	-fx-text-fill:#333;
+	-fx-font-family:"Microsoft YaHei";
+	-fx-font-size:16px;
+	-fx-font-weight: bold;
+    -fx-effect: dropshadow( gaussian , rgba(255,255,255,0.5) , 0,0,0,1 );
+}
+
+#paint {
+	-fx-background-image:url("../img/paint.png");	
+	-fx-background-size: 100%;
+}
+
+#money_plus {
+	-fx-background-image:url("../img/money_plus.png");
+	-fx-background-size: 100%;
+}
+
+#rainbow {
+	-fx-background-image:url("../img/rainbow.png");	
+	
+	-fx-background-size: 100%;
+}
+
+#bomb{
+	-fx-background-image:url("../img/bomb.png");
+	-fx-background-size: 100%;	
+}
+
+.blue_star {
+	-fx-background-image:url("../img/bubble2.png");
+	-fx-background-position: 0 -106;
+}
+.green_star {
+	-fx-background-image:url("../img/bubble2.png");
+	-fx-background-position: 0 -159;
+}
+.yellow_star {
+	-fx-background-image:url("../img/bubble2.png");
+	-fx-background-position: 0 0;
+}
+
+.purple_star {
+	-fx-background-image:url("../img/bubble2.png");
+	-fx-background-position: 0 -212;
+}
+.red_star {
+	-fx-background-image:url("../img/bubble2.png");
+	-fx-background-position: 0 -53;
+}
