@@ -1,0 +1,39 @@
+/* JavaFX CSS - Leave this comment until you have at least create one rule which uses -fx-Property */
+/* @font-face {
+        font-family:"Microsoft YaHei";
+        src: url('lt.ttf'); 
+}
+ */   
+.root {
+	-fx-background-image:url("../img/front.jpg"); 
+}
+
+.title {
+	-fx-text-fill:#FFF;
+	-fx-font-family:"Microsoft YaHei";
+	-fx-font-size:16px;
+	-fx-font-weight: bold;
+    -fx-effect: dropshadow( gaussian , rgba(255,255,255,0.5) , 0,0,0,1 );
+}
+
+.blue_star {
+	-fx-background-image:url("../img/popstar.png");
+	-fx-background-position: -2 -152;
+}
+.green_star {
+	-fx-background-image:url("../img/popstar.png");
+	-fx-background-position: -52 -150;
+}
+.yellow_star {
+	-fx-background-image:url("../img/popstar.png");
+	-fx-background-position: -2 -200;
+}
+
+.purple_star {
+	-fx-background-image:url("../img/popstar.png");
+	-fx-background-position: -52 -102;
+}
+.red_star {
+	-fx-background-image:url("../img/popstar.png");
+	-fx-background-position: -50 -198;
+}
