@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<diagram program="umlet" version="15.1.0">
+  <zoom_level>10</zoom_level>
+  <element>
+    <id>UMLClass</id>
+    <coordinates>
+      <x>2300</x>
+      <y>570</y>
+      <w>270</w>
+      <h>140</h>
+    </coordinates>
+    <panel_attributes>cn.campsg.practical.bubble.util::StarsUtil
+--
+--
++sort(StarList SL): void
+-swap(Star star1, Star star2): void
++main(String[] args): void
++copy(Star star): Star
++toMovedStar(Star star): MovedStar
+--
+</panel_attributes>
+    <additional_attributes/>
+  </element>
+</diagram>

@@ -1,0 +1,562 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<diagram program="umlet" version="15.1.0">
+  <zoom_level>10</zoom_level>
+  <element>
+    <id>UMLClass</id>
+    <coordinates>
+      <x>2670</x>
+      <y>140</y>
+      <w>280</w>
+      <h>190</h>
+    </coordinates>
+    <panel_attributes>cn.campsg.practical.bubble.entity::Position
+--
+-row: int
+-column: int
+--
++Position(int row, int column): ctor
++Position(): ctor
++getRow(): int
++getColumn(): int
++setRow(int row): void
++setColumn(int column): void
+--
+</panel_attributes>
+    <additional_attributes/>
+  </element>
+  <element>
+    <id>UMLClass</id>
+    <coordinates>
+      <x>2660</x>
+      <y>410</y>
+      <w>290</w>
+      <h>190</h>
+    </coordinates>
+    <panel_attributes>cn.campsg.practical.bubble.entity::Star
+--
+~position: Position
+~type: StarType
+--
++Star(Position position, StarType type): ctor
++Star(): ctor
++getPosition(): Position
++setPosition(Position position): void
++getType(): StarType
++setType(StarType type): void
+--
+</panel_attributes>
+    <additional_attributes/>
+  </element>
+  <element>
+    <id>UMLClass</id>
+    <coordinates>
+      <x>3110</x>
+      <y>210</y>
+      <w>310</w>
+      <h>380</h>
+    </coordinates>
+    <panel_attributes>cn.campsg.practical.bubble.entity::StarList
+--
+-stars: Star[]
+-size: int
+--
++StarList(): ctor
++StarList(int size): ctor
++add(Star star): void
++add(StarList starList): void
++get(int index): Star
++size(): int
++clear(): void
++remove(int index): void
++remove(Star star): void
++remove(StarList starList): void
++contains(Star star): boolean
++isEmpty(): boolean
++clone(): StarList
++set(int index, Star star): void
++set(StarList starList): void
++set(StarList starList, int index): void
++set(StarList starList, int index, int length): void
+--
+</panel_attributes>
+    <additional_attributes/>
+  </element>
+  <element>
+    <id>Relation</id>
+    <coordinates>
+      <x>2940</x>
+      <y>500</y>
+      <w>190</w>
+      <h>40</h>
+    </coordinates>
+    <panel_attributes>lt=&lt;..</panel_attributes>
+    <additional_attributes>10.0;10.0;170.0;20.0</additional_attributes>
+  </element>
+  <element>
+    <id>Relation</id>
+    <coordinates>
+      <x>2810</x>
+      <y>320</y>
+      <w>40</w>
+      <h>110</h>
+    </coordinates>
+    <panel_attributes>lt=&lt;..</panel_attributes>
+    <additional_attributes>20.0;10.0;10.0;90.0</additional_attributes>
+  </element>
+  <element>
+    <id>UMLClass</id>
+    <coordinates>
+      <x>1960</x>
+      <y>810</y>
+      <w>270</w>
+      <h>90</h>
+    </coordinates>
+    <panel_attributes>cn.campsg.practical.bubble.util::StarsUtil
+--
+--
++clone(Star star): Star
++main(String[] args): void
+--
+</panel_attributes>
+    <additional_attributes/>
+  </element>
+  <element>
+    <id>UMLClass</id>
+    <coordinates>
+      <x>1960</x>
+      <y>1050</y>
+      <w>460</w>
+      <h>180</h>
+    </coordinates>
+    <panel_attributes>cn.campsg.practical.bubble.service::StarServiceImpl
+--
+--
++createStars(): StarList
+-lookupByPath(Star base, StarList sList, StarList clearStars): void
++tobeClearedStars(Star base, StarList mCurrent): StarList
++getVMovedStars(StarList clearStars, StarList currentStarList): StarList
++getHMovedStars(StarList currentStarList): StarList
++tobeEliminated(StarList currentStarList): boolean
++getAwardStarList(StarList curretStars): StarList
+--
+</panel_attributes>
+    <additional_attributes/>
+  </element>
+  <element>
+    <id>Relation</id>
+    <coordinates>
+      <x>2090</x>
+      <y>890</y>
+      <w>30</w>
+      <h>180</h>
+    </coordinates>
+    <panel_attributes>lt=&lt;..</panel_attributes>
+    <additional_attributes>10.0;10.0;10.0;160.0</additional_attributes>
+  </element>
+  <element>
+    <id>UMLClass</id>
+    <coordinates>
+      <x>1360</x>
+      <y>630</y>
+      <w>290</w>
+      <h>210</h>
+    </coordinates>
+    <panel_attributes>cn.campsg.practical.bubble.entity::Star
+--
+-position: Position
+-type: StarType
+--
++Star(): ctor
++Star(Position position, StarType type): ctor
++getPosition(): Position
++setPosition(Position position): void
++getType(): StarType
++setType(StarType type): void
++toString(): String
+--
+</panel_attributes>
+    <additional_attributes/>
+  </element>
+  <element>
+    <id>UMLClass</id>
+    <coordinates>
+      <x>1360</x>
+      <y>1040</y>
+      <w>450</w>
+      <h>180</h>
+    </coordinates>
+    <panel_attributes>cn.campsg.practical.bubble.entity::MovedStar
+--
+-position: Position
+--
++MovedStar(): ctor
++MovedStar(Position position, StarType type, Position position1): ctor
++setPosition(Position position): void
++getMovedPosition(): Position
++main(String[] args): void
++toString(): String
+--
+</panel_attributes>
+    <additional_attributes/>
+  </element>
+  <element>
+    <id>Relation</id>
+    <coordinates>
+      <x>1500</x>
+      <y>580</y>
+      <w>40</w>
+      <h>70</h>
+    </coordinates>
+    <panel_attributes>lt=&lt;..</panel_attributes>
+    <additional_attributes>20.0;10.0;10.0;50.0</additional_attributes>
+  </element>
+  <element>
+    <id>Relation</id>
+    <coordinates>
+      <x>1350</x>
+      <y>730</y>
+      <w>320</w>
+      <h>410</h>
+    </coordinates>
+    <panel_attributes>lt=&lt;&lt;-</panel_attributes>
+    <additional_attributes>300.0;10.0;10.0;390.0</additional_attributes>
+  </element>
+  <element>
+    <id>UMLClass</id>
+    <coordinates>
+      <x>2130</x>
+      <y>320</y>
+      <w>460</w>
+      <h>230</h>
+    </coordinates>
+    <panel_attributes>&lt;&lt;interface&gt;&gt;
+cn.campsg.practical.bubble.service::StarService
+--
++MAX_ROW_SIZE = 10: int
++MAX_COLUMN_SIZE = 10: int
++STAR_TYPES = 5: int
+--
++createStars(): StarList
++tobeClearedStars(Star base, StarList sList): StarList
++getYMovedStars(StarList clearStars, StarList currentStarList): StarList
++getXMovedStars(StarList currentStarList): StarList
++tobeEliminated(StarList currentStarList): boolean
++getAwardStarList(StarList currentStarList): StarList
+--
+</panel_attributes>
+    <additional_attributes/>
+  </element>
+  <element>
+    <id>UMLClass</id>
+    <coordinates>
+      <x>2370</x>
+      <y>370</y>
+      <w>460</w>
+      <h>180</h>
+    </coordinates>
+    <panel_attributes>cn.campsg.practical.bubble.service::StarServiceImpl
+--
+--
++createStars(): StarList
+-findStarsByPath(Star base, StarList sList, StarList clearStars): void
++tobeClearedStars(Star base, StarList mCurrent): StarList
++getYMovedStars(StarList clearStars, StarList currentStarList): StarList
++getXMovedStars(StarList currentStarList): StarList
++tobeEliminated(StarList currentStarList): boolean
++getAwardStarList(StarList curretStars): StarList
+--
+</panel_attributes>
+    <additional_attributes/>
+  </element>
+  <element>
+    <id>UMLClass</id>
+    <coordinates>
+      <x>1890</x>
+      <y>370</y>
+      <w>460</w>
+      <h>180</h>
+    </coordinates>
+    <panel_attributes>cn.campsg.practical.bubble.service::StarServiceTester
+--
+--
++createStars(): StarList
++main(String[] args): void
++tobeClearedStars(Star base, StarList sList): StarList
++getYMovedStars(StarList clearStars, StarList currentStarList): StarList
++getXMovedStars(StarList currentStarList): StarList
++tobeEliminated(StarList currentStarList): boolean
++getAwardStarList(StarList currentStarList): StarList
+--
+</panel_attributes>
+    <additional_attributes/>
+  </element>
+  <element>
+    <id>Relation</id>
+    <coordinates>
+      <x>2510</x>
+      <y>360</y>
+      <w>50</w>
+      <h>210</h>
+    </coordinates>
+    <panel_attributes>lt=&lt;&lt;.</panel_attributes>
+    <additional_attributes>30.0;190.0;10.0;10.0</additional_attributes>
+  </element>
+  <element>
+    <id>Relation</id>
+    <coordinates>
+      <x>2180</x>
+      <y>360</y>
+      <w>110</w>
+      <h>210</h>
+    </coordinates>
+    <panel_attributes>lt=&lt;&lt;.</panel_attributes>
+    <additional_attributes>10.0;190.0;90.0;10.0</additional_attributes>
+  </element>
+  <element>
+    <id>UMLClass</id>
+    <coordinates>
+      <x>1350</x>
+      <y>360</y>
+      <w>330</w>
+      <h>230</h>
+    </coordinates>
+    <panel_attributes>cn.campsg.practical.bubble.entity::Position
+--
+-serialVersionUID = 5429457710354730689L: long
+-row: int
+-column: int
+--
++Position(): ctor
++Position(int row, int column): ctor
++getRow(): int
++setRow(int row): void
++getColumn(): int
++setColumn(int column): void
++toString(): String
+--
+</panel_attributes>
+    <additional_attributes/>
+  </element>
+  <element>
+    <id>UMLClass</id>
+    <coordinates>
+      <x>780</x>
+      <y>1160</y>
+      <w>460</w>
+      <h>230</h>
+    </coordinates>
+    <panel_attributes>cn.campsg.practical.bubble.service::StarServiceImpl
+--
+-logger = Logger.getLogger(StarServiceImpl.class): Logger
+--
++createStars(): StarList
++getYMovedStars(StarList clearStars, StarList currentStarList): StarList
+-findStarsByPath(Star base, StarList sList, StarList clearStars): void
++tobeClearedStars(Star base, StarList mCurrent): StarList
++getHMovedStars(StarList currentStarList): StarList
+-getEmpyColumns(StarList currentStarList): List&lt;Integer&gt;
++tobeEliminated(StarList currentStarList): boolean
+-getLeftStarNum(StarList currentStarList): int
++getAwardStarList(StarList curretStars): StarList
+--
+</panel_attributes>
+    <additional_attributes/>
+  </element>
+  <element>
+    <id>UMLClass</id>
+    <coordinates>
+      <x>820</x>
+      <y>1000</y>
+      <w>270</w>
+      <h>150</h>
+    </coordinates>
+    <panel_attributes>cn.campsg.practical.bubble.util::StarsUtil
+--
+--
++sort(StarList SL): void
+-swap(Star star1, Star star2): void
++main(String[] args): void
++copy(Star star): Star
++toMovedStar(Star star): MovedStar
+--
+</panel_attributes>
+    <additional_attributes/>
+  </element>
+  <element>
+    <id>Relation</id>
+    <coordinates>
+      <x>930</x>
+      <y>990</y>
+      <w>70</w>
+      <h>420</h>
+    </coordinates>
+    <panel_attributes>lt=&lt;..</panel_attributes>
+    <additional_attributes>10.0;400.0;50.0;10.0</additional_attributes>
+  </element>
+  <element>
+    <id>UMLClass</id>
+    <coordinates>
+      <x>30</x>
+      <y>1080</y>
+      <w>360</w>
+      <h>230</h>
+    </coordinates>
+    <panel_attributes>cn.campsg.practical.bubble.entity::StarList
+--
+-serialVersionUID = 1L: long
+--
++lookup(int row, int column): Star
++lookup(Position position): Star
++main(String[] args): void
++existed(Star star): boolean
++lastElement(): Star
++indexOf(int row, int column): int
++setNull(int row, int column): void
++update(int orow, int ocolumn, int row, int column): void
++toString(): String
+--
+</panel_attributes>
+    <additional_attributes/>
+  </element>
+  <element>
+    <id>UMLClass</id>
+    <coordinates>
+      <x>0</x>
+      <y>1080</y>
+      <w>460</w>
+      <h>230</h>
+    </coordinates>
+    <panel_attributes>cn.campsg.practical.bubble.service::StarServiceImpl
+--
+-logger = Logger.getLogger(StarServiceImpl.class): Logger
+--
++createBubbleMatrix(): StarList
++getVMovedStars(StarList clearStars, StarList currentStarList): StarList
+-findStarsByPath(Star base, StarList sList, StarList clearStars): void
++tobeClearedStars(Star base, StarList mCurrent): StarList
++getHMovedStars(StarList currentStarList): StarList
+-getEmpyColumns(StarList currentStarList): List&lt;Integer&gt;
++tobeEliminated(StarList currentStarList): boolean
+-getLeftStarNum(StarList currentStarList): int
++getAwardStarList(StarList curretStars): StarList
+--
+</panel_attributes>
+    <additional_attributes/>
+  </element>
+  <element>
+    <id>Relation</id>
+    <coordinates>
+      <x>160</x>
+      <y>1070</y>
+      <w>60</w>
+      <h>260</h>
+    </coordinates>
+    <panel_attributes>lt=&lt;&lt;.</panel_attributes>
+    <additional_attributes>40.0;240.0;10.0;10.0</additional_attributes>
+  </element>
+  <element>
+    <id>UMLClass</id>
+    <coordinates>
+      <x>70</x>
+      <y>110</y>
+      <w>330</w>
+      <h>120</h>
+    </coordinates>
+    <panel_attributes>cn.campsg.practical.bubble.service::Configuration
+--
++CONF_PATH = "score.conf": String
+-score: Score
+--
++Configuration(): ctor
++getScore(): Score
+--
+</panel_attributes>
+    <additional_attributes/>
+  </element>
+  <element>
+    <id>UMLClass</id>
+    <coordinates>
+      <x>1350</x>
+      <y>40</y>
+      <w>360</w>
+      <h>260</h>
+    </coordinates>
+    <panel_attributes>&lt;&lt;interface&gt;&gt;
+cn.campsg.practical.bubble.service::ScoreService
+--
++TOP_AWARD_SCORE = 2000: int
++AWARD_LIMIT = 10: int
++LOWER_AWARD_SCORE = 20: int
++LOWER_SCORE = 5: int
+--
++nextScoreByLevel(int nextLevel): int
++getCurrentLevelScore(): int
++getScoreByStars(StarList stars): int
++getScoreByStars(int stars): int
++getAwardScore(int awardStarNum): int
++isChangeLevel(int score): boolean
++isNoticePassLevel(int currentLevel, int score): boolean
+--
+</panel_attributes>
+    <additional_attributes/>
+  </element>
+  <element>
+    <id>UMLClass</id>
+    <coordinates>
+      <x>1300</x>
+      <y>670</y>
+      <w>350</w>
+      <h>210</h>
+    </coordinates>
+    <panel_attributes>cn.campsg.practical.bubble.service::ScoreServiceImpl
+--
+-cfg = null: Configuration
+--
++ScoreServiceImpl(): ctor
++getCurrentLevelScore(): int
++nextScoreByLevel(int nextLevel): int
++isChangeLevel(int score): boolean
++getScoreByStars(StarList stars): int
++getScoreByStars(int stars): int
++getAwardScore(int awardStarNum): int
++isNoticePassLevel(int currentLevel, int score): boolean
+--
+</panel_attributes>
+    <additional_attributes/>
+  </element>
+  <element>
+    <id>UMLClass</id>
+    <coordinates>
+      <x>70</x>
+      <y>290</y>
+      <w>350</w>
+      <h>210</h>
+    </coordinates>
+    <panel_attributes>cn.campsg.practical.bubble.service::ScoreServiceImpl
+--
+-cfg = null: Configuration
+--
++ScoreServiceImpl(): ctor
++getCurrentLevelScore(): int
++nextScoreByLevel(int nextLevel): int
++isChangeLevel(int score): boolean
++getScoreByStars(StarList stars): int
++getScoreByStars(int stars): int
++getAwardScore(int awardStarNum): int
++isNoticePassLevel(int currentLevel, int score): boolean
+--
+</panel_attributes>
+    <additional_attributes/>
+  </element>
+  <element>
+    <id>Relation</id>
+    <coordinates>
+      <x>220</x>
+      <y>220</y>
+      <w>30</w>
+      <h>90</h>
+    </coordinates>
+    <panel_attributes>lt=&lt;..</panel_attributes>
+    <additional_attributes>10.0;10.0;10.0;70.0</additional_attributes>
+  </element>
+</diagram>
