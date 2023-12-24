@@ -1,0 +1,86 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.*?>
+<?import javafx.geometry.*?>
+<?import java.lang.*?>
+<?import javafx.scene.layout.*?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.image.Image?>
+
+<AnchorPane id="mainPane" maxHeight="800.0" maxWidth="480.0" minHeight="800.0" minWidth="480.0" prefHeight="800.0" prefWidth="480.0" styleClass="root"  stylesheets="@../css/skin2.css" xmlns="http://javafx.com/javafx/8" xmlns:fx="http://javafx.com/fxml/1">
+   <children>
+      <FlowPane id="menu_title" prefHeight="60.0" prefWidth="480.0">
+         <children>
+            <Label id="lblCheckpoint" minWidth="100.0" styleClass="title" text="第1关">
+               <FlowPane.margin>
+                  <Insets left="20.0" top="20.0" />
+               </FlowPane.margin>
+            </Label>
+            <Label id="lblAim_Title" styleClass="title" text="目标">
+               <FlowPane.margin>
+                  <Insets left="70.0" top="20.0" />
+               </FlowPane.margin>
+            </Label>
+            <Label id="targetScore" maxWidth="150.0" minWidth="100.0" styleClass="title" text="1000">
+               <FlowPane.margin>
+                  <Insets left="20.0" top="20.0" />
+               </FlowPane.margin>               
+            </Label>  
+                     
+          <!-- 用ImageView控制图片的大小 -->  
+           
+           	<ImageView  fitHeight="39" fitWidth="48" >
+             	<image >
+             		  <Image url="/res/img/money_plus.png"/>
+             	</image>
+             	<FlowPane.margin>
+                 	 <Insets left="75.0" top="20.0" />
+               </FlowPane.margin> 
+             </ImageView>
+            </children>        
+      </FlowPane>
+      <FlowPane id="score_title" layoutY="75.0" prefHeight="60.0" prefWidth="480.0">
+         <children>            
+             <Label id="lblScore"  prefWidth="235" alignment="CENTER" style="-fx-font-size: 16; -fx-alignment: center;" styleClass="title" text="分数：0" textAlignment="CENTER" >
+           		<FlowPane.margin>
+                 	 <Insets left="110.0" top="0.0" />
+               </FlowPane.margin>
+             </Label>
+             <ImageView fitWidth="45" fitHeight="45">
+				<Image url="/res/img/bomb.png"/>
+             </ImageView> 
+             <ImageView fitWidth="45" fitHeight="45" >
+             	<Image url="/res/img/paint.png"/>
+             </ImageView>
+            	 
+             <ImageView  fitWidth="45" fitHeight="45" >
+				<Image url="/res/img/rainbow.png"/>
+             </ImageView>             
+         </children>
+      </FlowPane>
+      <FlowPane id="message_title" layoutY="120.0" prefHeight="60.0" prefWidth="480.0">
+         <children>
+            <Label id="lblMessage" alignment="CENTER" prefHeight="60.0" prefWidth="480.0" style="-fx-font-size: 16; -fx-alignment: center;" styleClass="title"   textAlignment="CENTER" />
+         </children>
+      </FlowPane>
+      <AnchorPane id="game_pane" layoutY="205.0" maxHeight="480.0" maxWidth="480.0" minHeight="480.0" minWidth="480.0" prefHeight="480.0" prefWidth="480.0" >
+      </AnchorPane>
+      <FlowPane id="bottom" layoutY="730.0" prefHeight="60.0" prefWidth="480.0">
+         <children>
+         	<ImageView fitWidth="24" fitHeight="24">
+				<Image url="/res/img/csg.png"/>
+				<FlowPane.margin>
+                 	 <Insets left="120.0"  right="10.0" top="00.0" />
+               </FlowPane.margin>
+             </ImageView> 
+         	<Label id="lblWebsite"  style="-fx-font-size: 14; -fx-alignment: center;" styleClass="title" text="技术支持：www.campsg.cn" textAlignment="CENTER" >
+         	   <FlowPane.margin>
+                 	 <Insets right="65.0" top="00.0" />
+               </FlowPane.margin>
+         	</Label>
+         </children>
+      </FlowPane>
+   </children>
+</AnchorPane>
